@@ -93,15 +93,15 @@ else:
 
 while True:
     distance = input('Сколько пробежал в первый день, км.?: ')
-# TODO: не предусмотрена обработка ввода не цифр, запятой в числе и значений <=0
     if distance:
-        distance = float(distance)
-        break
+        if float(distance) > 0:
+            break
 while True:
     goal_distance = input('Какая целевая ежедневная дистанция, км.?: ')
     if goal_distance:
-        goal_distance = float(goal_distance)
-        break
+        if float(goal_distance) > 0:
+            break
+distance, goal_distance = float(distance), float(goal_distance)
 days_count = 1
 while True:
     print(f'{days_count}-й день: {distance:.3f}')
