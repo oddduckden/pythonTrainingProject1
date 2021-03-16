@@ -88,12 +88,21 @@ else:
 # 6. Спортсмен занимается ежедневными пробежками. В первый день его результат составил a километров. Каждый день спортсмен увеличивал результат на 10 % относительно предыдущего.
 # Требуется определить номер дня, на который общий результат спортсмена составить не менее b километров. Программа должна принимать значения параметров a и b и выводить одно натуральное число — номер дня.
 
-distance = float(input('Сколько пробежал в первый день, км.?: '))
-goal_distance = float(input('Какая целевая ежедневная дистанция, км.?: '))
+while True:
+    distance = input('Сколько пробежал в первый день, км.?: ')
+# TODO: не предусмотрена обработка ввода не цифр, запятой в числе и значений <=0
+    if distance:
+        distance = float(distance)
+        break
+while True:
+    goal_distance = input('Какая целевая ежедневная дистанция, км.?: ')
+    if goal_distance:
+        goal_distance = float(goal_distance)
+        break
 days_count = 1
 while True:
     print(f'{days_count}-й день: {distance:.3f}')
+    if distance > goal_distance:
+            break
     days_count += 1
     distance *= 1.1
-    if distance >= goal_distance:
-        break
