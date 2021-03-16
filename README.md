@@ -1,2 +1,2 @@
 # pythonTrainingProject1
-# nothing useful just learning
+nothing useful just learning
