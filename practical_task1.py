@@ -92,15 +92,13 @@ else:
 # выводить одно натуральное число — номер дня.
 
 while True:
-    distance = input('Сколько пробежал в первый день, км.?: ')
-    if distance:
-        if float(distance) > 0:
-            break
+    temp = distance = input('Сколько пробежал в первый день, км.?: ')
+    if distance and float(temp) > 0:
+        break
 while True:
-    goal_distance = input('Какая целевая ежедневная дистанция, км.?: ')
-    if goal_distance:
-        if float(goal_distance) > 0:
-            break
+    temp = goal_distance = input('Какая целевая ежедневная дистанция, км.?: ')
+    if goal_distance and float(temp) > 0:
+        break
 distance, goal_distance = float(distance), float(goal_distance)
 days_count = 1
 while True:
